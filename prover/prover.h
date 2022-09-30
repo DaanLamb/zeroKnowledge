@@ -3,13 +3,17 @@
 
 # include <iostream>
 
-class Prover {
+class Prover
+{
   public:
     Prover();
-    sendHash();
-    proveKnowledge();
+    void sendHash();
+    void proveKnowledge();
   private:
     const int secret;
+    int produceSecret();
+    bool testPrime();
+
 }
 
 
