@@ -5,10 +5,13 @@ int Prover::produceSecret()
   random_device dev;
   mt19937 rng(dev());
   uniform_int_distribution<std::mt19937::result_type> distCandidate(minSecret, maxSecret); // a rng distributed over all candiates
-  int candidate
+  int candidate;
+  int numb_candidates = 0;
   do
   {
-    candidate = distCandidate(rng)
-  } while (!testPrime(candidate))
-  return candidate
+    candidate = distCandidate(rng);
+
+    numb_candidates++;
+  } while (!testPrime(candidate));
+  return candidate;
 }

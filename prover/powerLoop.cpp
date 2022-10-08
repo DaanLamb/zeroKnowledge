@@ -7,6 +7,6 @@ bool Prover::powerLoop(const int s, int x, const int candidate)
     x = (x * x) % candidate;
     if (x == candidate - 1)
       return true;
-    return false;
   }
+  return false;
 }

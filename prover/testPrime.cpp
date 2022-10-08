@@ -4,7 +4,7 @@ bool Prover::testPrime(int candidate)
 {
   // bases to test against for deterministic miller rabin test
   // from https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test
-  vector<int> baseVector = {2, 3, 5, 7}
+  vector<int> baseVector = {2, 3, 5, 7};
   // rewrite to n == 2^s * d + 1
   int d = candidate - 1;
   int s = 0;
