@@ -17,7 +17,7 @@ bool Prover::testPrime(int candidate)
   int x;
   for (int base : baseVector)
   {
-    x = modularExp(base, d, candidate);
+    x = ::modularExp(base, d, candidate);
     if (x == 1 || x == candidate - 1)
     {
       continue;

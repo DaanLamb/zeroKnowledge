@@ -1,6 +1,4 @@
-#include "prover.ih"
-
-int Prover::modularExp(int base, int exp, const int mod)
+int modularExp(int base, int exp, const int mod)
 {
   int res = 1; // initialize result
   base = base % mod;

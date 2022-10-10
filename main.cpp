@@ -3,4 +3,5 @@
 int main ()
 {
   Prover proverInstance;
+  cout << proverInstance;
 }

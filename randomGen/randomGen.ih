@@ -1,0 +1,3 @@
+#include "randomGen.h"
+
+using namespace std;
