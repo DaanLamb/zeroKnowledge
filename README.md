@@ -1,5 +1,5 @@
 # zeroKnowledge
-A testing repo for zero knowledge proofs
+A testing repo for zero knowledge proofs. This project was as a hobby project.
 Works on the basis of the discrete log of a public value.
 
 The prover generates a exponent $g$, a secret value $x$ and a prime $p$.
@@ -12,6 +12,7 @@ They then calculate the value $C = g^r mod p$ and send this value to the verifie
 The verifier than can choose one of two scenarios.
   1. Ask for the value $r$ so you can verify $C = g^r mod p$
   2. Ask for the value of $(x + r) mod (p - 1)$. This lets the verifier check wether the equation $(C * y) mod p == g^{(x + r) mod (p - 1)} mod p.
+
 In both these scenarios, the Prover only discloses a random number.
 For scenario number 2, the prover can give provide a value that satisfies the equation in two cases: They know the secret, or they craft it through a modular inverse of y. In the second case, they cannot give the value r, which would make them fail scenario 1.
 The crux of this system relies on the moment when the verifier chooses which scenario to use. This is after the prover has already provided a $C$. Thus if they were to try to fake their knowledge, they have already committed to a strategy that only satisfies one of the scenarios.
